@@ -1,0 +1,17 @@
+node_modules
+dist
+.husky
+
+packages/*/es
+packages/*/lib
+packages/icons/build
+
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+package.json
+*.local
+.DS_Store
+.idea
+vite.config*.js
+local-dev/server.js

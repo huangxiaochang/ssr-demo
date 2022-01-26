@@ -1,0 +1,7 @@
+dist
+node_modules
+packages/*/es
+packages/*/lib
+
+pnpm-lock.yaml
+.pnpm-debug.log

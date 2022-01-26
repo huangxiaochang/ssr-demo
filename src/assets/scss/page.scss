@@ -1,0 +1,44 @@
+// css shared by notice pages
+@import '@/assets/scss/var.scss';
+@import '@/assets/scss/mixins.scss';
+
+.page-wrap {
+  max-width: $baseContentWidth;
+  min-width: $baseMinWidth;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 120px;
+  @include min-padding;
+}
+.page-title {
+  font-family: AlibabaPuHuiTi-Bold;
+  // font-size: 38px;
+  font-size: calc(var(--font-size) + 22px);
+  color: $theme-color;
+  margin: 0 0 36px 0;
+  font-weight: normal;
+  text-align: center;
+}
+.detail-page {
+  max-width: $detailPageWidth;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 120px;
+  text-align: left;
+}
+.detail-page-title {
+  @extend .page-title;
+  text-align: left;
+  // font-size: 30px;
+  font-size: calc(var(--font-size) + 14px);
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+.notice-publish-time {
+  font-family: PingFangSC-Regular;
+  // font-size: 16px;
+  font-size: var(--font-size);
+  color: #676767;
+  padding-bottom: 46px;
+  border-bottom: 1px solid #3e3e3e;
+}

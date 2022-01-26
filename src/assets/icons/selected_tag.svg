@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>selected tag</title>
+    <g id="selected-tag" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="路径" fill="#996600" points="19 0 19 19 0 19"></polygon>
+        <polyline id="路径" stroke="#FFFFFF" transform="translate(13.000000, 11.914214) rotate(-45.000000) translate(-13.000000, -11.914214) " points="16 13.4142136 10 13.4142136 10 10.4142136"></polyline>
+    </g>
+</svg>

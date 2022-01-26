@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/arrow</title>
+    <g id="icon/arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polyline id="路径" stroke="#996600" stroke-width="2" stroke-linecap="square" transform="translate(8.914214, 6.949747) rotate(-315.000000) translate(-8.914214, -6.949747) " points="5.41421356 3.44974747 12.4142136 3.44974747 12.4142136 10.4497475"></polyline>
+        <rect id="矩形" fill="#996600" x="-3.90798505e-14" y="5.94974747" width="13" height="2"></rect>
+    </g>
+</svg>

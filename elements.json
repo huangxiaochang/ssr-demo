@@ -1,0 +1,6 @@
+{
+  "router-view": {
+    "flow": true,
+    "permittedContent": ["suspense?", "component?", "@flow"]
+  }
+}

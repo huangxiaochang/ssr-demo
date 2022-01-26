@@ -1,0 +1,47 @@
+.demo {
+  color: red;
+}
+
+// reset browser css
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+@import './themes/large.scss';
+@import './themes/medium.scss';
+@import './themes/small.scss';
+
+body {
+  &.small-theme {
+    @extend %small-theme;
+  }
+  &.medium-theme {
+    @extend %medium-theme;
+  }
+  &.large-theme {
+    @extend %large-theme;
+  }
+}
+
+.el-dropdown__popper {
+  z-index: 6000 !important;
+}

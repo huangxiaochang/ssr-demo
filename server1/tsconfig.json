@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "types": ["vite/client"],
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "lib": ["es2015"]
+}

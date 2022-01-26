@@ -1,0 +1,115 @@
+// shared by table components
+@import '@/assets/scss/var.scss';
+.table-header-class {
+  font-family: PingFangSC-Semibold, Microsoft YaHei;
+  // font-size: 16px;
+  font-size: var(--font-size);
+  color: rgba(0, 0, 0, 0.85);
+  th {
+    background-color: #f3f3f3;
+    padding: 15px 0;
+    border: none;
+    &:first-child {
+      padding-left: 10px;
+    }
+    &:last-child {
+      padding-right: 10px;
+    }
+    .cell {
+      line-height: var(--line-height);
+    }
+  }
+}
+
+.table-row-class {
+  cursor: pointer;
+  td {
+    padding: 12px 0;
+    font-family: PingFangSC-Regular;
+    color: #333333;
+    border-top: 1px solid #dfdfdf;
+    .cell {
+      // font-size: 18px;
+      font-size: var(--font-size);
+      line-height: var(--line-height);
+    }
+    &:first-child {
+      padding-left: 10px;
+    }
+    &:last-child {
+      padding-right: 10px;
+    }
+  }
+  &.el-table__row--striped {
+    td {
+      background: #f3f3f3 !important;
+    }
+  }
+  &:hover {
+    td {
+      background-color: #f9f4ea !important;
+      color: $theme-color;
+    }
+  }
+}
+
+.table-wrap {
+  // padding: 0 10px;
+}
+.row-item {
+  display: flex;
+  font-family: PingFangSC-Regular;
+  font-size: var(--font-size);
+  height: 82px;
+  border-top: 1px solid #dfdfdf;
+  padding: 0 10px;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  &:nth-child(odd) {
+    background: #f3f3f3;
+  }
+  &:nth-child(even) {
+    background: #fff;
+  }
+  .col-item {
+    color: #333333;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: 0 10px;
+  }
+  &.header {
+    border: none;
+    height: 58px;
+    .col-item {
+      height: 58px;
+      font-family: PingFangSC-Semibold, Microsoft YaHei, MicrosoftYaHei-Bold;
+      color: rgba(0, 0, 0, 0.85);
+      line-height: 58px;
+    }
+  }
+  &.body-row {
+    &:hover {
+      background-color: #f9f4ea !important;
+      color: $theme-color;
+    }
+  }
+  .project-num {
+    flex-basis: 240px;
+  }
+  .bulltype {
+    flex-basis: 130px;
+  }
+  .public-time {
+    flex-basis: 110px;
+  }
+  .deadline-bidding {
+    flex-basis: 130px;
+  }
+  .time-remaining {
+    flex-basis: 150px;
+  }
+  .notice-title {
+    flex: 1;
+  }
+}

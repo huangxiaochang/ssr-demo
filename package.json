@@ -1,0 +1,72 @@
+{
+  "name": "test-ssr-vue",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "node ./server/index.js",
+    "build": "pnpm run build:client && pnpm run build:server && pnpm run build:pre",
+    "build:noExternal": "npm run build:client && npm run build:server:noExternal",
+    "build:client": "vite build --ssrManifest --outDir dist/client",
+    "build:server": "cross-env isServer=true vite build --ssr src/entry-server.ts --outDir dist/server",
+    "build:server:noExternal": "cross-env isServer=true vite build --config vite.config.noexternal.js --ssr src/entry-server.ts --outDir dist/server",
+    "build:pre": "ts-node ./server/prerender.ts",
+    "generate": "vite build --ssrManifest --outDir dist/static && npm run build:server && node prerender-static",
+    "serve": "cross-env NODE_ENV=production isServer=true node server/index.js",
+    "debug": "node --inspect-brk server",
+    "prepare": "husky install",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --max-warnings 0 && prettier --check . && pnpm run lint:html",
+    "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx && prettier --write . && pnpm run lint:html",
+    "lint:html": "html-validate ./src --ext vue,html --max-warnings 0",
+    "start": "pm2 start ecosystem.config.js"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "packages/**/*.{vue,html}": "html-validate",
+    "*.{scss,css,json,yaml,yml,md,html}": "prettier --write"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "element-plus": "^1.2.0-beta.6",
+    "hkust-ui": "git+http://gitlab.hkust-gz.edu.cn/xchuang/hkust-ui-package.git#semver:1.0",
+    "lru-cache": "^6.0.0",
+    "vue": "^3.2.25",
+    "vue-i18n": "^9.2.0-beta.23",
+    "vue-router": "^4.0.0",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.2",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@types/compression": "^1.7.2",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "@vitejs/plugin-vue": "^2.0.1",
+    "@vitejs/plugin-vue-jsx": "^1.3.3",
+    "compression": "^1.7.4",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "express": "^4.17.1",
+    "fs-extra": "^10.0.0",
+    "html-validate": "^6.1.4",
+    "html-validate-vue": "^4.0.2",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1",
+    "sass": "^1.45.1",
+    "sass-loader": "^12.4.0",
+    "serve-static": "^1.14.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4",
+    "unplugin-auto-import": "^0.5.11",
+    "unplugin-vue-components": "^0.17.11",
+    "vite": "^2.7.10"
+  }
+}

@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Muli';
+  src: local('Muli'), url('~@/assets/fonts/Muli.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muli-Bold';
+  src: local('Muli-SemiBold'), url('~@/assets/fonts/Muli-SemiBold.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muli-ExtraBold';
+  src: local('Muli-ExtraBold'), url('~@/assets/fonts/Muli-ExtraBold.ttf');
+  font-display: swap;
+  font-style: normal;
+}

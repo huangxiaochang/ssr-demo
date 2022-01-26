@@ -1,0 +1,21 @@
+{
+  "plugins": ["html-validate-vue"],
+  "extends": ["html-validate:recommended", "html-validate-vue:recommended"],
+  "elements": ["html5", "./elements.json"],
+  "transform": {
+    "^.*\\.vue$": "html-validate-vue"
+  },
+
+  "rules": {
+    "close-order": "error",
+    "void": "off",
+    "void-style": "off",
+    "no-inline-style": "off",
+    "element-name": [
+      "error",
+      {
+        "pattern": "[a-z][a-z0-9\\-._]*(-[a-z0-9\\-._])*$"
+      }
+    ]
+  }
+}

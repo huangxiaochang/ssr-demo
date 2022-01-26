@@ -1,0 +1,14 @@
+@import './var.scss';
+
+@mixin container-center {
+  max-width: $baseMaxWidth;
+  min-width: $baseMinWidth;
+  margin: 0 auto;
+}
+
+@mixin min-padding {
+  @media screen and (max-width: 1440px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

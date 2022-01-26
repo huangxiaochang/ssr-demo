@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>The plugin of video to picture</h1>
+    <div style="display: inline-block;">
+      <video id="video" src="" controls width="600"></video>
+      <br>
+      <input type="file" id="file" onchange="chooseFile(event)">
+      <button onclick="exportImage()">Export current picture of video</button>
+    </div>
+    <div style="display: inline-block;">
+      <canvas id="canvas" width="600" height="500"></canvas>
+      <br>
+      <button onclick="downlopImage()">downlop the picture</button>
+    </div>
+    <script>
+      function chooseFile(ev) {
+        var file = document.getElementById('file').files[0]
+        var url = URL.createObjectURL(file)
+        var video = document.getElementById('video')
+        video.src = url
+      }
+      function exportImage() {
+        var video = document.getElementById('video')
+        var canvas = document.getElementById('canvas')
+        var ctx = canvas.getContext('2d')
+          var computedStyle = document.defaultView.getComputedStyle(video, null);
+          var height = computedStyle.height
+          height = height.substring(0, height.length - 2)
+          console.log(video.width, video.height, 9999, height);
+          canvas.height = height
+          ctx.drawImage(video, 0 , 0 , video.width, height)
+      }
+
+      function downlopImage() {
+        var canvas = document.getElementById('canvas')
+        var type = 'png'
+        var img = canvas.toDataURL(`image/${type}`)
+        var dlLink = document.createElement('a');
+        dlLink.download = new Date().getTime() + `.${type}`;
+        dlLink.href = img;
+        dlLink.dataset.downloadurl = [`img/${type}`, dlLink.download, dlLink.href].join(':');
+
+        document.body.appendChild(dlLink);
+        dlLink.click();
+        document.body.removeChild(dlLink);
+      }
+    </script>
+  </body>
+</html>

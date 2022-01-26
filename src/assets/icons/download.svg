@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/download</title>
+    <g id="icon/download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(3.000000, 2.000000)">
+            <path d="M10.5,10.8284271 L4,10.8284271 C3.72385763,10.8284271 3.5,10.6045695 3.5,10.3284271 L3.5,3.82842712 L3.5,3.82842712" id="路径" stroke="#996600" stroke-width="1.5" stroke-linecap="round" transform="translate(7.000000, 7.328427) rotate(-45.000000) translate(-7.000000, -7.328427) "></path>
+            <rect id="矩形" fill="#996600" x="6.21966094" y="0" width="1.5" height="12" rx="0.75"></rect>
+            <path d="M14,12 L14,14.5 C14,14.7761424 13.7761424,15 13.5,15 L0.5,15 C0.223857625,15 3.38176876e-17,14.7761424 0,14.5 L0,12 L0,12" id="路径" stroke="#996600" stroke-width="1.5" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>
